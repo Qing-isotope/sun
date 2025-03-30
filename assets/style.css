@@ -1,0 +1,366 @@
+  /* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212; 
+    color: #e0e0e0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Header section (Hero) with gradient */
+  header.hero {
+    background: linear-gradient(45deg, #4fdac2, #b666b2); /* Gradient from turquoise to blue */
+    /* background: linear-gradient(45deg, #ff7e5f, #feb47b); */
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Adds depth */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2); /* Subtle bottom border */
+  }
+  
+  header.hero h1 {
+    font-size: 3rem;
+    /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); */
+  }
+  
+  header.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  header.hero .nav-links {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  header.hero .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  header.hero .nav-links a:hover {
+    text-decoration: none;
+    /* text-shadow: 0 0 8px #fff;  */
+  }
+  
+  header.hero .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  header.hero .nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Main content */
+  main {
+    padding: 3rem 1rem;
+    max-width: 1200px; /* Restrict width on large screens */
+    margin: 0 auto;
+  }
+  
+  /* Preview section */
+  .preview {
+    max-width: 1200px;
+    /* width: 48%; */
+    margin: 0 auto;
+    background-color: #1e1e1e; /* Dark gray background */
+    border-radius: 12px; /* Slightly rounded corners for a modern feel */
+    /* padding: 2rem; */
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(79, 218, 194, 0.2); /* Soft teal glow */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Section title */
+  .preview h2 {
+    color: #4fdac2; /* Bright accent */
+    /* border-bottom: 2px solid #4fdac2; Underline effect */
+    margin-bottom: 1rem;
+    padding-bottom: 5px;
+  }  
+  /* Text content */
+  .preview p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    /* color: #e0e0e0; */
+  }
+  
+  /* Call-to-action button */
+  .preview .button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4fdac2;
+    color: #1e1e1e; /* Dark text for contrast */
+    text-decoration: none;
+    border-radius: 8px; /* Softer button corners */
+    font-weight: bold;
+    margin-top: 15px;
+    margin-right: 8px;
+    box-shadow: 0 4px 8px rgba(79, 218, 194, 0.3);
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  /* Button hover effect */
+  .preview .button:hover {
+    background-color: #66fff2; /* Lighter cyan */
+    transform: translateY(-2px); /* Lift effect */
+  }
+  
+  .preview-container {
+    display: flex;               /* Display sections next to each other */
+    gap: 20px;                   /* Add space between the sections */
+    justify-content: space-between; /* Distribute space evenly */
+    flex-wrap: wrap;             /* Allow sections to wrap to the next line if screen is small */
+  }
+  /* Consistent style for all other pages (e.g., About, CV, Research, LPX-Bern) */
+  .page-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    /* background-color: #222; 
+    border-radius: 10px; */
+    /* margin-bottom: 2rem; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
+  }
+  
+  .page-section h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 5px;
+    /* border-bottom: 2px solid #4fdac2; */
+    color: #4fdac2;
+  }
+  
+  .page-section p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 1.8;
+  }
+
+  /* General link styles */
+  a {
+    color: #4fdac2;  /* Normal link color */
+    text-decoration: none;  /* Remove underline */
+    transition: color 0.3s ease-in-out;  /* Smooth color change */
+  }
+
+  /* Hover effect */
+  a:hover {
+    color: #66fff2;  /* Brighter blue */
+    text-decoration: underline;  /* Add underline for hover */
+  }
+
+  /* Visited links */
+  a:visited {
+    color: rgb(200, 164, 253);  /* Softer purple */
+  }
+
+  /* Active (when clicking) */
+  a:active {
+    color: #ffcc00;  /* Warm yellow */
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    /* display: block; */
+    margin: 0 auto;
+  }  
+  
+  .image-container {
+    margin-top: 1rem;
+    overflow: hidden; /* Ensures only the square area is shown */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between images */
+  }
+  
+  .image-container img {
+    width: 600px;  
+    height: 430px; 
+    object-fit: cover; /* Crops to fill the square */
+    object-position: center; /* Keeps the middle part */
+    border-radius: 10px; /* (Optional) Rounded corners */
+  }
+
+  /* Contact teaser in footer */
+  .contact-teaser {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    padding-bottom: 2rem;
+  }
+  
+  .contact-teaser a {
+    color: #00bcd4;
+    font-weight: bold;
+  }
+  
+  .contact-teaser a:hover {
+    text-decoration: none;
+  }
+  
+  .social-links i {
+    margin-right: 1rem;
+    font-size: 1.8rem;
+    color: #4fdac2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 2rem; */
+  }
+
+  .social-links a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 4rem;  /* Increase size */
+    color: #333;
+    transition: color 0.3s, transform 0.3s;
+}
+
+  .social-links a:hover i{
+      color: #b666b2;  /* Hover color */
+      transform: scale(1.1);
+  }
+  /* for java */
+  .social-links a.hover-effect i{
+    color: #b666b2;  /* Hover color */
+    transform: scale(1.1);
+  }
+
+  .bibliography {
+    background-color: #1e1e1e; /* Dark gray background */
+    padding: 2rem;
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.1); /* Soft cyan glow */
+    border-left: 5px solid #4fdac2; /* Accent border */
+  }
+  
+  /* Bibliography heading */
+  .bibliography h2 {
+    color: #4fdac2; /* Your theme color */
+    border-bottom: 2px solid #4fdac2;
+    padding-bottom: 5px;
+  }
+  
+  /* Bibliography list */
+  .bibliography ul {
+    list-style-type: disc;  /* Keep bullets */
+    padding-left: 20px;
+  }
+  
+  /* Each reference item */
+  .bibliography li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #e0e0e0; /* Light text */
+  }
+  
+  /* Link styling in bibliography */
+  .bibliography a {
+    color: #4fdac2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .bibliography a:hover {
+    text-decoration: underline;
+    color: #66fff2; /* Neon blue on hover */
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .decorative-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+  .divider-icon {
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: #4fdac2;
+}
+
+  /* Responsive Layout (Mobile) */
+  @media (max-width: 768px) {
+    header.hero {
+      padding: 1.5rem;
+    }
+  
+    header.hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    header.hero p {
+      font-size: 1rem;
+    }
+  
+    .preview {
+      padding: 1.5rem;
+    }
+  
+    .contact-teaser {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Mobile-first adjustments for smaller devices */
+  @media (max-width: 480px) {
+    header.hero h1 {
+      font-size: 2rem;
+    }
+  
+    header.hero p {
+      font-size: 0.9rem;
+    }
+  
+    main {
+      padding: 1.5rem 0.5rem;
+    }
+  
+    .preview {
+      padding: 1rem;
+    }
+  
+    .preview h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  

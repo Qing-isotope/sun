@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me - My Personal Website</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="page-section">
+      <h2>About Me</h2>
+      <div class="decorative-divider">
+        <span class="divider-icon">🌿</span>
+      </div>
+      <p>I am a postdoctoral researcher focusing on understanding surface greenhouse gas exchanges and investigating the interactions between land cover dynamics and the climate at regional to global scales.</p>
+      <div class="decorative-divider">
+        <span class="divider-icon">🌍</span>
+      </div>
+      <p>Throughout my training and career, I have been engaged in diverse research areas centred on global warming and sustainability.
+      With an interdisciplinary background in experimental ecophysiology and process-based modelling, I aim to advance knowledge as well as tools for climate change adaptation and mitigation.</p>
+      <div class="decorative-divider">
+        <span class="divider-icon">🎨</span>
+      </div> 
+      <p>I enjoy drawing and painting, apart from coding and writing. I appreciate sitcoms and simulation games. </p>
+      <div class="decorative-divider">
+        <span class="divider-icon">🐱</span>
+      </div>
+      <p>One of my officemates is a cat, Aria, and she only knocked over 1 out of 39 plants in our office.</p>      
+      <div class="image-container">
+        <img src="assets/images/cat_on_stool_0.jpg" alt="cat_on_stool_0">
+        <img src="assets/images/cat_on_stool_1.jpg" alt="cat_on_stool_1">
+      </div>  
+    
+  </main>
+  
+  <div id="footer"></div>
+
+  <script>
+    fetch('include/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      })
+      .catch(error => console.error('Header fetch error:', error));
+    fetch('include/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Footer fetch error:', error));
+  </script>
+
+</body>
+</html>

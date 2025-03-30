@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - My Personal Website</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <div class="preview-container">
+      <section class="preview">
+        <h2>About Me</h2>
+        <p>I am a postdoctoral researcher driven by a deep passion for sustainability.</p>
+        <a href="about.html" class="button">More →</a>
+        <a href="#footer" class="button contact-button">Contact →</a>
+      </section>
+      
+      <section class="preview">
+        <h2>Research</h2>
+        <p>My research focuses on the interactions between climate and ecosystems.</p>
+        <a href="research.html" class="button">Overview →</a>
+        <a href="lpx-bern.html" class="button">LPX-Bern →</a>
+      </section>
+    </div>
+    
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('include/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      })
+      .catch(error => console.error('Header fetch error:', error));
+    fetch('include/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Footer fetch error:', error));
+
+  // Listen for click on the "Contact →" button
+  document.querySelector('.contact-button').addEventListener('click', function () {
+    // Select all social links (the icons) in the footer
+    const socialIcons = document.querySelectorAll('.social-links a');
+    
+    // Loop through each social icon and apply the hover effect
+    socialIcons.forEach(icon => {
+      icon.classList.add('hover-effect'); // Add the hover effect class
+      
+      // Optionally, remove the hover effect after 2 seconds
+      setTimeout(() => {
+        icon.classList.remove('hover-effect'); // Remove the hover effect class after 2 seconds
+      }, 450); // 2 seconds
+    });
+  });
+
+</script>
+
+
+</body>
+</html>
