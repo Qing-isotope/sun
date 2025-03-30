@@ -48,17 +48,14 @@
 
   // Listen for click on the "Contact →" button
   document.querySelector('.contact-button').addEventListener('click', function () {
-    // Select all social links (the icons) in the footer
     const socialIcons = document.querySelectorAll('.social-links a');
     
-    // Loop through each social icon and apply the hover effect
     socialIcons.forEach(icon => {
-      icon.classList.add('hover-effect'); // Add the hover effect class
+      icon.classList.add('hover-effect'); 
       
-      // Optionally, remove the hover effect after 2 seconds
       setTimeout(() => {
-        icon.classList.remove('hover-effect'); // Remove the hover effect class after 2 seconds
-      }, 450); // 2 seconds
+        icon.classList.remove('hover-effect'); 
+      }, 450); 
     });
   });
 
