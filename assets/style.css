@@ -382,8 +382,12 @@ footer {
 
   header.hero nav {
       padding: 0px;
+      font-size: 1rem;
   }
-
+  header.hero .nav-links {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
   .preview {
       padding: 0 1rem;
   }
@@ -392,24 +396,24 @@ footer {
 /* Mobile-first adjustments for smaller devices */
 @media (max-width: 480px) {
   header.hero {
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
   }
   header.hero h1 {
       font-size: 2rem;
   }
 
   header.hero p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
   }
 
   header.hero nav {
-      padding: 5px;
+      padding: 0px;
+      font-size: 1rem;
   }
-
-  main {
-      padding: 0 1rem;
+  header.hero .nav-links {
+    margin-top: 1.5rem;
+    font-size: 1rem;
   }
-
   .preview {
       padding: 0 1rem;
   }
