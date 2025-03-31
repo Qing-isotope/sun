@@ -6,8 +6,8 @@
   <title>Home - My Personal Website</title>
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
+<script src="assets/js/script.js"></script>
 <body>
   <div id="header"></div>
 
@@ -33,19 +33,6 @@
   <div id="footer"></div>
 
   <script>
-    fetch('include/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      })
-      .catch(error => console.error('Header fetch error:', error));
-    fetch('include/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      })
-      .catch(error => console.error('Footer fetch error:', error));
-
   // Listen for click on the "Contact →" button
   document.querySelector('.contact-button').addEventListener('click', function () {
     const socialIcons = document.querySelectorAll('.social-links a');
@@ -55,7 +42,7 @@
       
       setTimeout(() => {
         icon.classList.remove('hover-effect'); 
-      }, 450); 
+      }, 400); 
     });
   });
 

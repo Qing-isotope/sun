@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<script src="assets/js/script.js"></script>
 <body>
   <div id="header"></div>
   <main>
@@ -21,6 +22,12 @@
       </div>
       <p>Throughout my training and career, I have been engaged in diverse research areas centred on global warming and sustainability.
       With an interdisciplinary background in experimental ecophysiology and process-based modelling, I aim to advance knowledge as well as tools for climate change adaptation and mitigation.</p>
+      <div class="decorative-divider">
+        <a href="https://www.wyssacademy.org/" target="_blank">
+        <img src="assets/logo/log_wa_small.png" alt="decorative-divider" class="divider-image">
+        </a>
+      </div>      
+      <p>I am currently based at the <a href="https://www.wyssacademy.org/" target="_blank">Wyss Academy for Nature</a> and affiliated with the <a href="https://www.climate.unibe.ch/index_eng.html" target="_blank">Climate and Environmental Physics</a> at the University of Bern. Our team, <a href="https://www.wyssacademy.org/research-innovation" target="_blank">Climate Scenarios for Sustainable Development</a>, works on addressing the impacts of land use and land management on the interactions between the terrestrial biosphere and climate.</p>
       <div class="decorative-divider">
         <span class="divider-icon">🎨</span>
       </div> 
@@ -37,21 +44,6 @@
   </main>
   
   <div id="footer"></div>
-
-  <script>
-    fetch('include/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      })
-      .catch(error => console.error('Header fetch error:', error));
-    fetch('include/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      })
-      .catch(error => console.error('Footer fetch error:', error));
-  </script>
 
 </body>
 </html>

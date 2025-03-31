@@ -7,20 +7,12 @@
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<script src="assets/js/script.js"></script>
 <body>
   <div id="header"></div>
 
   <main>
-    <!-- <section class="page-section">
-      <h2>My Research</h2>
-      <p>My research primarily focuses on understanding the impacts of climate change on ecosystems, using Earth System models to simulate vegetation and carbon cycles. I work on projects related to:</p>
-      <ul>
-        <li>Vegetation-climate interactions</li>
-        <li>Carbon and nutrient cycling</li>
-        <li>Climate model development</li>
-      </ul>
-      <p>For more details on specific projects, feel free to explore my publications or contact me directly.</p>
-    </section> -->
+
     <div class="under-construction">
         <h1>Page Under Construction</h1>
         <p>I am working on it. Please check back later!</p>
@@ -28,21 +20,5 @@
   </main>
 
   <div id="footer"></div>
-
-  <script>
-    fetch('include/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      })
-      .catch(error => console.error('Header fetch error:', error));
-    fetch('include/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      })
-      .catch(error => console.error('Footer fetch error:', error));
-  </script>
-
 </body>
 </html>
