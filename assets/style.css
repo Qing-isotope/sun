@@ -1,3 +1,7 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+
 /* Base styles */
 * {
   margin: 0;
@@ -10,10 +14,11 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Roboto', Kaiti, sans-serif !important;
   background-color: #121212; 
-  color: #e0e0e0;
+  color: #cecece;
 }
+
 
 /* Header section (Hero) with gradient */
 header.hero {
@@ -38,10 +43,10 @@ header.hero p {
 header.hero nav {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px; /* Same as .page-section */
+  max-width: 1200px; 
   justify-content: flex-start; /* Align nav items to the left */
   margin: 0 auto; /* align to the max-width */
-  padding: 0 1rem; /* Same padding as .page-section */
+  padding: 0 1rem; 
 }
 
 header.hero .nav-links {
@@ -157,7 +162,7 @@ main {
 
 .page-section p {
   font-size: 1.1rem;
-  color: #ffffff;
+  color: #cecece;
   line-height: 1.8;
   /* background-color: #54435e; */
 }
@@ -294,7 +299,7 @@ img {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: #e0e0e0;
+  color: #cecece;
 }
 
 .bibliography a {
@@ -416,5 +421,11 @@ footer {
   }
   .preview {
       padding: 0 1rem;
+  }
+  .page-section p {
+    font-size: 1rem;
+  }
+  .bibliography li {
+    font-size: 0.9rem;
   }
 }
