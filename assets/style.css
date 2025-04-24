@@ -437,16 +437,16 @@ footer {
 
   header.hero p,
   .contact-teaser {
-      font-size: 1rem;
+      font-size: 0.9rem;
   }
 
   header.hero nav {
       padding: 0px;
-      font-size: 1rem;
+      font-size: 0.9rem;
   }
   header.hero .nav-links {
     margin-top: 1.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .preview {
       padding: 0 1rem;
@@ -468,17 +468,24 @@ footer {
 
   header.hero nav {
       padding: 0px;
-      font-size: 1rem;
+      font-size: 0.9rem;
   }
   header.hero .nav-links {
     margin-top: 1.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+  header.hero .nav-links a {
+    margin-top: 1rem;
+    padding: 1px;
   }
   .preview {
       padding: 0 1rem;
   }
-  .page-section p {
+  .preview p {
     font-size: 1rem;
+  }
+  .page-section p {
+    font-size: 0.9rem;
   }
   .bibliography li {
     font-size: 0.9rem;
