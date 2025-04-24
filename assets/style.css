@@ -476,7 +476,7 @@ footer {
   }
   header.hero .nav-links a {
     margin-top: 1rem;
-    padding: 1px;
+    padding: 0px;
   }
   .preview {
       padding: 0 1rem;
