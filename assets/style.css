@@ -257,9 +257,9 @@ img {
   gap: 10px;
   align-items: center;
   overflow: visible;
-  height: 30vw; /* Height relative to viewport width */
+  height: 30vw; 
   min-height: 100px;
-  max-height: 250px; 
+  max-height: 300px; 
 }
 
 .image-container-auto img {
