@@ -248,20 +248,42 @@ img {
   left: 0;
   object-fit: cover;
   object-position: center;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
+
+.image-container-auto {
+  display: flex;
+  height: 300px;
+  gap: 10px;
+  align-items: center;
+  overflow: visible;
+  height: 30vw; /* Height relative to viewport width */
+  min-height: 100px;
+  max-height: 250px; 
+}
+
+.image-container-auto img {
+  height: 100%;
+  width: auto; 
+  object-fit: cover;
+  /* border-radius: 10px; */
+  flex-shrink: 0;
+  overflow: hidden; 
+}
+
 
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
   .image-container {
       flex-direction: column; /* Stack images vertically */
-      gap: 5px; /* Reduce gap between stacked images */
+      gap: 5px;
   }
 
   .image-container img {
       width: 100%;
       height: width; /* Maintain aspect ratio */
   }
+
 }
 
 /* Contact teaser in footer */
