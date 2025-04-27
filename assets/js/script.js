@@ -9,7 +9,20 @@ function highlightActiveNavLink() {
         }
     });
 }
-
+document.addEventListener('DOMContentLoaded', () => {
+    const sun = document.querySelector('.sun-icon');
+  
+    // Touch start: Add "active" effect
+    sun.addEventListener('touchstart', () => {
+      sun.classList.add('active');
+    });
+  
+    // Touch end: Remove "active" effect
+    sun.addEventListener('touchend', () => {
+      sun.classList.remove('active');
+    });
+  });
+  
 // Fetch and insert header
 fetch('include/header.html')
 .then(response => response.text())
