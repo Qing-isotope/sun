@@ -1,8 +1,8 @@
 :root {
-    --primary-color: rgb(94, 88, 54);
-    --primary-color2: #737566; 
+    --primary-color: #b66966;
+    --primary-color2: rgb(253, 167, 164); 
     --primary-color3: #66fff2; 
-    --secondary-color:  #76998e;
+    --secondary-color: #8fbfd4;
     --highlight-color: #ffcc00;
     --text-color: #cecece;
     --text-color2: #ffffff;
@@ -16,21 +16,23 @@
   
 /* Header section (Hero) with gradient */
 header.hero {
-  background: black; 
-  background-image: url('../images/img_bg_landscape_waterpaint.png');
+  /* background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));  */
+  background-image: url('/assets/images/img_zh_airport_dawn.jpg');
   background-size: 100% auto;
+  /* background-position: center; */
   background-repeat: no-repeat;
-  background-position: center 65%;
+  background-position: center 55%;
   background-attachment: local; /* Optional: 'fixed' for parallax effect */
   
   /* Minimum dimensions */
   /* min-height: 100vh;       */
-  min-height: 200px;
+  min-height: 200px;       /* Full viewport height */
   width: 100%; 
 
   position: relative;
   color: var(--header-text-color);
   text-align: center;
   padding: 1rem 0;
+  box-shadow: 0 6px 15px var(--background-color); /* Adds depth */
   /* border-bottom: 3px solid rgba(255, 255, 255, 0.2); Subtle bottom border, nice for the linear-gradient background */
 }

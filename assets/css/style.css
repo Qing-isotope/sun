@@ -200,7 +200,7 @@ main {
   border-radius: 12px;
   padding: 0 1rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 12px var(--primary-color2); 
+  /* box-shadow: 0 4px 12px var(--primary-color2);  */
   transition: transform 0.3s ease-in-out;
   max-width: 630px;
   display: flex;
@@ -210,7 +210,7 @@ main {
 }
 
 .preview h2 {
-  color: var(--secondary-color); /* Bright accent */
+  color: var(--secondary-color); 
   margin: 1rem 0rem 1rem 0;
   padding-bottom: 5px;
 }
