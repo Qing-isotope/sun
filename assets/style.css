@@ -2,19 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
 
-:root {
-  --primary-color: #b666b2;
-  --primary-color2: rgb(200, 164, 253); 
-  --primary-color3: #66fff2; 
-  --secondary-color: #4fdac2;
-  --highlight-color: #ffcc00;
-  --text-color: #cecece;
-  --text-color2: #ffffff;
-  --background-color: black;
-  --subtle-shadow: #ebf3cf2c;
-  --footer-background-color: #333;
-  --footer-text-color: white;
-  --header-text-color: white;
+/* @import url('themes/default_teal.css'); */
+/* @import url('themes/blue_peach.css'); */
+@import url('themes/grey_peat.css');
+
+
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 99;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+}
+
+#back-to-top:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
 }
 
 /* Base styles */
@@ -35,15 +52,6 @@ body {
 }
 
 
-/* Header section (Hero) with gradient */
-header.hero {
-  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color)); 
-  color: var(--header-text-color);
-  text-align: center;
-  padding: 1rem 0;
-  box-shadow: 0 6px 15px var(--background-color); /* Adds depth */
-  border-bottom: 3px solid rgba(255, 255, 255, 0.2); /* Subtle bottom border */
-}
 
 header.hero h1 {
   padding: 3rem 0 0 0;
@@ -104,7 +112,72 @@ header.hero .nav-links a:hover::after,
 header.hero .nav-links a.active::after {
   width: 100%; /* Keep both hover and active underlines fully expanded */
 }
+/* Responsive Layout (Mobile) */
+@media (max-width: 768px) {
+  header.hero {
+      padding: 0.5rem 1rem;
+  }
 
+  header.hero h1 {
+      font-size: 2.5rem;
+  }
+
+  header.hero p,
+  .contact-teaser {
+      font-size: 0.9rem;
+  }
+
+  header.hero nav {
+      padding: 0px;
+      font-size: 0.9rem;
+  }
+  header.hero .nav-links {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .preview {
+      padding: 0 1rem;
+  }
+}
+
+/* Mobile-first adjustments for smaller devices */
+@media (max-width: 480px) {
+  header.hero {
+    padding: 0.5rem 1rem;
+  }
+  header.hero h1 {
+      font-size: 2rem;
+  }
+
+  header.hero p {
+      font-size: 0.8rem;
+  }
+
+  header.hero nav {
+      padding: 0px;
+      font-size: 0.9rem;
+  }
+  header.hero .nav-links {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+  header.hero .nav-links a {
+    margin-top: 1rem;
+    padding: 0px;
+  }
+  .preview {
+      padding: 0 1rem;
+  }
+  .preview p {
+    font-size: 1rem;
+  }
+  .page-section p {
+    font-size: 0.9rem;
+  }
+  .bibliography li {
+    font-size: 0.9rem;
+  }
+}
 /* Main content */
 main {
   padding: 3rem 1rem;
@@ -124,7 +197,7 @@ main {
 .preview {
   width: 100%; 
   margin: 0 auto;
-  border-radius: 12px; /* Slightly rounded corners */
+  border-radius: 12px;
   padding: 0 1rem;
   margin-bottom: 2rem;
   box-shadow: 0 4px 12px var(--primary-color2); 
@@ -241,7 +314,7 @@ img {
 }
 
 .image-container img {
-  width: 49%;
+  width: 32%;
   aspect-ratio: 1 / 1;
   position: relative;
   top: 0;
@@ -273,10 +346,10 @@ img {
 
 
 /* Responsive adjustments for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .image-container {
       flex-direction: column; /* Stack images vertically */
-      gap: 5px;
+      gap: 10px;
   }
 
   .image-container img {
@@ -371,8 +444,8 @@ img {
 /* Footer */
 footer {
   text-align: center;
-  background-color: var(footer-background-color);
-  color: var(footer-text-color);
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
   padding: 1rem;
 }
 
@@ -425,69 +498,26 @@ footer {
   display: inline-block;    
 }
 
-/* Responsive Layout (Mobile) */
-@media (max-width: 768px) {
-  header.hero {
-      padding: 0.5rem 1rem;
-  }
 
-  header.hero h1 {
-      font-size: 2.5rem;
-  }
 
-  header.hero p,
-  .contact-teaser {
-      font-size: 0.9rem;
-  }
 
-  header.hero nav {
-      padding: 0px;
-      font-size: 0.9rem;
-  }
-  header.hero .nav-links {
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-  }
-  .preview {
-      padding: 0 1rem;
-  }
+/* Gradient Divider Styles */
+.gradient-divider {
+  width: 100%;
+  height: 5px; /* You can adjust the height as needed */
+  background: linear-gradient(45deg, #ff5733, #33c1ff, #39b039);
+  background-size: 300% 300%;
+  animation: gradientMove 5s ease infinite;
 }
 
-/* Mobile-first adjustments for smaller devices */
-@media (max-width: 480px) {
-  header.hero {
-    padding: 0.5rem 1rem;
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
   }
-  header.hero h1 {
-      font-size: 2rem;
+  50% {
+    background-position: 100% 50%;
   }
-
-  header.hero p {
-      font-size: 0.8rem;
-  }
-
-  header.hero nav {
-      padding: 0px;
-      font-size: 0.9rem;
-  }
-  header.hero .nav-links {
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-  }
-  header.hero .nav-links a {
-    margin-top: 1rem;
-    padding: 0px;
-  }
-  .preview {
-      padding: 0 1rem;
-  }
-  .preview p {
-    font-size: 1rem;
-  }
-  .page-section p {
-    font-size: 0.9rem;
-  }
-  .bibliography li {
-    font-size: 0.9rem;
+  100% {
+    background-position: 0% 50%;
   }
 }

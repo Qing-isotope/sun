@@ -1,0 +1,38 @@
+:root {
+    --primary-color: rgb(94, 88, 54);
+    --primary-color2: #737566; 
+    --primary-color3: #66fff2; 
+    --secondary-color:  #76998e;
+    --highlight-color: #ffcc00;
+    --text-color: #cecece;
+    --text-color2: #ffffff;
+    --background-color: black;
+    --subtle-shadow: #ebf3cf2c;
+    --footer-background-color: #000000;
+    --footer-text-color: #cecece;
+    --header-text-color: rgb(0, 0, 0);
+  }
+
+  
+/* Header section (Hero) with gradient */
+header.hero {
+  /* background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));  */
+  background-image: url('/assets/images/img_bg_landscape_waterpaint.png');
+  background-size: 100% auto;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-position: center 55%;
+  background-attachment: local; /* Optional: 'fixed' for parallax effect */
+  
+  /* Minimum dimensions */
+  /* min-height: 100vh;       */
+  min-height: 200px;       /* Full viewport height */
+  width: 100%; 
+
+  position: relative;
+  color: var(--header-text-color);
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 6px 15px var(--background-color); /* Adds depth */
+  /* border-bottom: 3px solid rgba(255, 255, 255, 0.2); Subtle bottom border, nice for the linear-gradient background */
+}
