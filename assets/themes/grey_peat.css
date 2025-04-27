@@ -16,8 +16,8 @@
   
 /* Header section (Hero) with gradient */
 header.hero {
-  /* background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));  */
-  background-image: url('/assets/images/img_bg_landscape_waterpaint.png');
+  background: black; 
+  background-image: url('assets/images/img_bg_landscape_waterpaint.png');
   background-size: 100% auto;
   /* background-position: center; */
   background-repeat: no-repeat;
