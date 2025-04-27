@@ -17,7 +17,7 @@
 /* Header section (Hero) with gradient */
 header.hero {
   background: black; 
-  background-image: url('https://qing-isotope.github.io/sun/assets/images/img_bg_landscape_waterpaint.png');
+  background-image: url('../images/img_bg_landscape_waterpaint.png');
   background-size: 100% auto;
   /* background-position: center; */
   background-repeat: no-repeat;
