@@ -302,6 +302,25 @@ img {
   margin: 0 auto;
 }
 
+.research-foci-scheme {
+  width: min(600px, 80vw);
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  opacity: 0.95;
+}
+.img-small {
+  width: min(150px, 20vw);
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
 .image-container {
   margin-top: 1rem;
   overflow: hidden;
@@ -497,9 +516,6 @@ footer {
   height: auto;             
   display: inline-block;    
 }
-
-
-
 
 /* Gradient Divider Styles */
 .gradient-divider {
